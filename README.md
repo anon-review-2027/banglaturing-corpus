@@ -1,10 +1,11 @@
 # BanglaTuring Corpus
 
-**Status:** Anonymized supplementary material for a paper currently under double-blind review at ICEEICT 2027. This repository exists solely to allow reviewers to verify dataset-level claims made in the manuscript. It is not the final public release.
+**Status:**  Anonymized supplementary material for a manuscript currently under double-blind peer review. This repository exists solely to allow reviewers to verify dataset-level claims made in the manuscript. It is not the final public release.
 
 ## Overview
 
-BanglaTuring is a contamination-aware benchmark for Bengali AI-generated text detection. It contains 20,000 documents — 10,000 human-written and 10,000 AI-generated — balanced across five generators and 45 academic and literary disciplines, with length and stylistic controls documented in the accompanying paper.
+BanglaTuring is a contamination-sensitive benchmark of AI-generated Bengali text detection. It consists of 20,000 documents, 10,000 written by humans and 10,000 AI generated, equally distributed across 5 generators and 45 academic and literary fields, the length and stylistic controls are outlined in the accompanying paper.
+
 
 | Property | Value |
 |---|---|
@@ -16,6 +17,7 @@ BanglaTuring is a contamination-aware benchmark for Bengali AI-generated text de
 | Total words | ~2,605,322 (whitespace-delimited) |
 | Mean document length | Human 130.55 words · AI 129.98 words |
 | Language | Bengali (Bangla) |
+
 
 ## File
 
@@ -60,16 +62,18 @@ Every discipline appears in both the human and AI classes (no topic is exclusive
   - **Google (Gemini 3.1 Pro)**
   - **Grok (Grok 4.5)**
   
-  Document counts were fixed at 2,000 per engine regardless of survey share. Usage-weighted metrics can be recovered by reweighting with the survey percentages reported in the paper.
-- **Length matching:** Mean document length is closely matched between classes (130.55 vs. 129.98 words); full distributional and stylometric audit details, including confounder controls (register, grammatical person, dash usage, digit ratio, etc.), are reported in the paper rather than as separate columns in this file.
+The documents we retrieved were human documents that appeared open on the Bengali web pages from the year 2010 to November 2022, before the ChatGPT was released openly. The continuously editable Bengali Wikipedia was not included.
+- **Length matching:** 
+The number of documents was set at 2000 per engine irrespective of survey share. The usage weighted metrics can be computed by reweighting the survey percentages reported in the paper.
+Length matching: mean length of documents per class is very close (130.55 vs. 129.98) words; full length distributional and stylometric audit data are reported in the paper but not as separate columns in this file, any confounder controls used in length are reported as such (e.g., register, grammatical person, dash usage, digit ratio, etc.)
 
 ## Known Limitations
 
-- `text` values are drawn from openly accessible web sources for the human class; redistribution rights vary by original source. This review copy is provided strictly for evaluation purposes and is not a final licensing determination.
-- A small number of human documents (embedded within otherwise topic-relevant content, e.g. institutional contact information cited within an article) retain incidental contact details from the original source material. These are unrelated to the authorship of this dataset or paper and will be reviewed for redaction before public release.
-- This repository does not include prompt templates or evaluation/audit code; those are described in the manuscript and will accompany the full public release.
-- A datasheet documenting per-document provenance, generation parameters, and licensing notes will be included with the camera-ready release.
+- `text` The human class values are obtained from freely available web sources and may be redistributed depending on the rights of the original source. This is a review copy for evaluation purposes only, does not form a final determination of licensure.
+- A small number of human documents (embedded in otherwise topic-relevant content, such as institutional contact details mentioned within an article) have incidental contact details from the original source material. These are not related to the Data and Paper authors and will be reviewed for redaction prior to public release.
+- Prompt templates and evaluation/audit code are not included in this repository, but are detailed in the manuscript and will be released with the full public version.
+- The camera-ready release will include a datasheet of per-document provenance, generation parameters and licensing notes.
 
 ## License
 
-Licensing (CC BY 4.0) will be finalized and applied upon paper acceptance. No license is granted for reuse of this review copy beyond the purposes of peer review.
+Licensing (CC BY 4.0) will be completed and applied at paper acceptance. This is a review copy and it may not be used for anything other than peer review.
